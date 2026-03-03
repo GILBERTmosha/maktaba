@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Gilbert Mosha Teacher | Masomo ya HTML, CSS na Database Tanzania</title>
+    <meta name="description" content="Karibu kwenye maktaba ya Gilbert Mosha Teacher. Pakua miongozo ya bure ya Web Design (HTML, CSS) na usimamizi wa Data (Database/SQL).">
+    <meta name="keywords" content="Gilbert Mosha, Teacher, HTML, CSS, Database, SQL, Web Design Tanzania, 0793770731">
+    <meta name="author" content="Gilbert Mosha">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1e40af;
+            --secondary: #0891b2;
+            --accent: #f59e0b;
+            --dark: #0f172a;
+            --light: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--light); color: var(--dark); line-height: 1.6; scroll-behavior: smooth; }
+
+        /* Navigation */
+        nav { background: white; padding: 1rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-content { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 20px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Header */
+        header { 
+            background: linear-gradient(135deg, var(--primary), var(--dark)); 
+            color: white; 
+            padding: 80px 20px; 
+            text-align: center; 
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .profile-container { position: relative; display: inline-block; }
+        .profile-img { 
+            width: 160px; 
+            height: 160px; 
+            border-radius: 50%; 
+            border: 6px solid var(--accent); 
+            object-fit: cover; 
+            margin-bottom: 20px;
+            background: white;
+        }
+
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; font-weight: 300; }
+
+        /* Sections */
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .section-header { 
+            margin: 40px 0 20px; 
+            padding-bottom: 10px; 
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 25px; 
+        }
+
+        /* Card Styling */
+        .card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        
+        .card-tag { 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            padding: 5px 15px; 
+            border-radius: 50px; 
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .tag-web { background: #dbeafe; color: var(--primary); }
+        .tag-data { background: #cffafe; color: var(--secondary); }
+
+        .card h3 { margin-bottom: 15px; color: var(--dark); }
+        .card p { color: #64748b; font-size: 0.95rem; margin-bottom: 20px; }
+
+        .btn { 
+            text-align: center; 
+            padding: 12px; 
+            border-radius: 10px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            transition: 0.3s;
+        }
+        .btn-web { background: var(--primary); color: white; }
+        .btn-data { background: var(--secondary); color: white; }
+        .btn:hover { opacity: 0.9; transform: scale(1.02); }
+
+        /* Contact Section */
+        .contact-box { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 20px; 
+            text-align: center; 
+            margin-top: 60px;
+            border: 2px dashed #cbd5e1;
+        }
+        .contact-box h2 { color: var(--primary); margin-bottom: 10px; }
+        .phone-btn { 
+            display: inline-block; 
+            margin-top: 15px; 
+            font-size: 1.5rem; 
+            color: var(--accent); 
+            text-decoration: none; 
+            font-weight: 700; 
+        }
+
+        footer { 
+            background: var(--dark); 
+            color: white; 
+            text-align: center; 
+            padding: 40px 20px; 
+            margin-top: 60px; 
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-content">
+        <div style="font-weight: 700; color: var(--primary);">GM TEACHER</div>
+        <div class="nav-links">
+            <a href="#home">Nyumbani</a>
+            <a href="#web">Web Design</a>
+            <a href="#data">Data Science</a>
+            <a href="#contact">Mawasiliano</a>
+        </div>
+    </div>
+</nav>
+
+<header id="home">
+    <div class="profile-container">
+        <img src="https://lh3.googleusercontent.com/d/1_vRT_CKLxv_prD5CLdHt8PsdURCBFzWF" alt="Gilbert Mosha Teacher" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
+    </div>
+    <h1>Gilbert Mosha Teacher</h1>
+    <p>ICT Specialist | Web Design (HTML/CSS) | Data & Database Management</p>
+</header>
+
+<div class="container">
+
+    <h2 id="web" class="section-header">🌐 Masomo ya Web Design</h2>
+    <div class="grid">
+        <div class="card">
+            <div>
+                <span class="card-tag tag-web">HTML & CSS</span>
+                <h3>Introduction to Web Designing</h3>
+                <p>Mwongozo huu unakufundisha jinsi ya kuanza kutengeneza website kwa kutumia HTML na CSS. Ni rahisi na una mifano ya kodi.</p>
+            </div>
+            <a href="https://drive.google.com/file/d/1_vRT_CKLxv_prD5CLdHt8PsdURCBFzWF/view?usp=sharing" target="_blank" class="btn btn-web">Pakua Document (PDF)</a>
+        </div>
+
+        </div>
+
+    <h2 id="data" class="section-header">📊 Masomo ya Data & Database</h2>
+    <div class="grid">
+        <div class="card">
+            <div>
+                <span class="card-tag tag-data">SQL / DATABASE</span>
+                <h3>Misingi ya Data & Database</h3>
+                <p>Jifunze jinsi ya kusimamia taarifa (Data) na kutumia lugha ya SQL kutengeneza mifumo imara ya hifadhidata.</p>
+            </div>
+            <a href="WEKA_LINK_YAKO_HAPA" target="_blank" class="btn btn-data">Pakua Document (PDF)</a>
+        </div>
+    </div>
+
+    <div id="contact" class="contact-box">
+        <h2>Unahitaji Msaada wa Kiufundi?</h2>
+        <p>Wasiliana na Gilbert Mosha kwa mafunzo zaidi ya Web Design na Data Science.</p>
+        <a href="tel:0793770731" class="phone-btn">📞 0793770731</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Gilbert Mosha Teacher. Haki zote zimehifadhiwa.</p>
+    <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">Kazi zako, Elimu yako, Mustakabali wako.</p>
+</footer>
+
+</body>
+</html>
